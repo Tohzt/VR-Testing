@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cymdn1dm82reg"]
+
+[ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_nf6a8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pkg17"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2yo4"]
+albedo_color = Color(0.15388322, 0.22111452, 0.9999959, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ec2tb"]
+material = SubResource("StandardMaterial3D_l2yo4")
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="Cube" type="RigidBody3D" unique_id=1897529184]
+collision_layer = 4
+script = ExtResource("1_nf6a8")
+picked_up_layer = 65540
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=107137558]
+shape = SubResource("BoxShape3D_pkg17")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=193028164]
+mesh = SubResource("BoxMesh_ec2tb")

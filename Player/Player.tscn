@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://d3o7xo35634bj"]
+
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="1_6ysni"]
+[ext_resource type="Script" uid="uid://bktdyd8n2kbea" path="res://Hand.gd" id="1_xhfnw"]
+[ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="2_tok1r"]
+[ext_resource type="Script" uid="uid://ck4yn3hxuobj7" path="res://addons/godot-xr-tools/player/player_body.gd" id="2_vlldt"]
+[ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="3_ddoul"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="5_s1rgi"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="6_s1rgi"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="7_vlldt"]
+
+[node name="Player" type="Node3D" unique_id=1487023001]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1320749375]
+
+[node name="PlayerBody" type="CharacterBody3D" parent="XROrigin3D" unique_id=111404520 groups=["player_body"] instance=ExtResource("1_6ysni")]
+process_priority = -100
+process_physics_priority = -100
+collision_layer = 524288
+collision_mask = 1023
+script = ExtResource("2_vlldt")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1654719701]
+
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D" unique_id=320724535]
+tracker = &"left_hand"
+script = ExtResource("1_xhfnw")
+
+[node name="LeftHand" parent="XROrigin3D/LeftHand" unique_id=1466062177 instance=ExtResource("2_tok1r")]
+
+[node name="MovementDirect" parent="XROrigin3D/LeftHand" unique_id=1613920494 instance=ExtResource("5_s1rgi")]
+strafe = true
+
+[node name="FunctionPickup" parent="XROrigin3D/LeftHand" unique_id=2114299415 instance=ExtResource("6_s1rgi")]
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D" unique_id=571247117]
+tracker = &"right_hand"
+script = ExtResource("1_xhfnw")
+
+[node name="RightHand" parent="XROrigin3D/RightHand" unique_id=1674403880 instance=ExtResource("3_ddoul")]
+
+[node name="MovementTurn" parent="XROrigin3D/RightHand" unique_id=94780583 instance=ExtResource("7_vlldt")]
+turn_mode = 2
+
+[node name="FunctionPickup" parent="XROrigin3D/RightHand" unique_id=1606174339 instance=ExtResource("6_s1rgi")]
