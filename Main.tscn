@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://wbxuo8uoriaq"]
 
 [ext_resource type="Script" uid="uid://mwkb75qhvd5a" path="res://Main.gd" id="1_glv2v"]
+[ext_resource type="Texture2D" uid="uid://cgh6mxqved0c5" path="res://Textures/Prototype/Dark/texture_01.png" id="2_fos0i"]
 [ext_resource type="PackedScene" uid="uid://d3o7xo35634bj" path="res://Player/Player.tscn" id="2_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://cymdn1dm82reg" path="res://Objects/Cube.tscn" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://bhw16fti01yrg" path="res://Textures/Prototype/Orange/texture_02.png" id="4_3dxm6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mf4mk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -20,14 +22,26 @@ glow_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_r0du0"]
 size = Vector3(10, 0.1, 10)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lgr22"]
+albedo_texture = ExtResource("2_fos0i")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true
+
 [sub_resource type="BoxMesh" id="BoxMesh_cm0pq"]
+material = SubResource("StandardMaterial3D_lgr22")
 size = Vector3(10, 0.1, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uu6xs"]
 size = Vector3(1, 1, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ywgk8"]
-albedo_color = Color(0.44925648, 0.44925654, 0.44925654, 1)
+albedo_texture = ExtResource("4_3dxm6")
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_r0du0"]
 material = SubResource("StandardMaterial3D_ywgk8")
