@@ -99,6 +99,10 @@ material = SubResource("StandardMaterial3D_ay6n4")
 inner_radius = 0.064
 outer_radius = 0.1
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sssk5"]
+friction = 0.05
+bounce = 0.2
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tmdll"]
 height = 0.025
 radius = 0.08
@@ -153,7 +157,9 @@ mesh = SubResource("BoxMesh_2ckfp")
 
 [node name="Paddle Red" type="RigidBody3D" parent="." unique_id=1897529184]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7161399, -0.77742696)
-collision_layer = 4
+collision_layer = 5
+custom_integrator = true
+contact_monitor = true
 script = ExtResource("3_l5yow")
 picked_up_layer = 65540
 
@@ -174,7 +180,9 @@ mesh = SubResource("TorusMesh_egv43")
 
 [node name="Paddle Blue" type="RigidBody3D" parent="." unique_id=729027493]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7161399, 0.76967454)
-collision_layer = 4
+collision_layer = 5
+custom_integrator = true
+contact_monitor = true
 script = ExtResource("3_l5yow")
 picked_up_layer = 65540
 
@@ -193,11 +201,16 @@ mesh = SubResource("CapsuleMesh_ls253")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0043265224, 0)
 mesh = SubResource("TorusMesh_dt2fv")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1800290140]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0037092, 0)
+[node name="Puck" type="RigidBody3D" parent="." unique_id=1800290140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53151965, 0.3559086)
+mass = 0.05
+physics_material_override = SubResource("PhysicsMaterial_sssk5")
+can_sleep = false
+custom_integrator = true
+contact_monitor = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=763954020]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puck" unique_id=763954020]
 shape = SubResource("CylinderShape3D_tmdll")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D" unique_id=1382202002]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Puck/CollisionShape3D" unique_id=1382202002]
 mesh = SubResource("CylinderMesh_mbat3")
