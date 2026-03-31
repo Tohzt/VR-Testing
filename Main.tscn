@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cymdn1dm82reg" path="res://Objects/Cube.tscn" id="3_r0du0"]
 [ext_resource type="Texture2D" uid="uid://bhw16fti01yrg" path="res://Textures/Prototype/Orange/texture_02.png" id="4_3dxm6"]
 [ext_resource type="PackedScene" uid="uid://o68u8p1psulf" path="res://Objects/air_hockey_table.tscn" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://07y08lx8mbw2" path="res://Beastwood/Beastwood.tscn" id="7_lgr22"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mf4mk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -58,7 +59,7 @@ environment = SubResource("Environment_8uh7m")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, -2.8943193, 0)
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1330373001]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26, -0.05, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=619510098]
 shape = SubResource("BoxShape3D_r0du0")
@@ -82,4 +83,7 @@ mesh = SubResource("BoxMesh_r0du0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1210808, 0)
 
 [node name="Air Hockey" parent="." unique_id=485288983 instance=ExtResource("6_3dxm6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.575615, 0.5, -1.5789394)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.092578, 0.5, -1.6427717)
+
+[node name="Beastwood" parent="." unique_id=237084785 instance=ExtResource("7_lgr22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4355426, 0.42523718, 0.027312994)
