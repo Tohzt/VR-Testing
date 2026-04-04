@@ -2,10 +2,15 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD:Beastwood/Beastwood_4-4-26_floor_tiles_06_diff_1k.png.import
 uid="uid://bancl0n1dtfya"
 path.s3tc="res://.godot/imported/Beastwood_4-4-26_floor_tiles_06_diff_1k.png-fe05066ea3106bfc4f6abbf968f76dea.s3tc.ctex"
+=======
+uid="uid://n8nw461fttqi"
+path.etc2="res://.godot/imported/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png-b76f089533c4b85d32e9c2533eee1cdb.etc2.ctex"
+>>>>>>> 057bf21 (not sure what i worked on last):Beastwood/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png.import
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -14,8 +19,13 @@ generator_parameters={
 
 [deps]
 
+<<<<<<< HEAD:Beastwood/Beastwood_4-4-26_floor_tiles_06_diff_1k.png.import
 source_file="res://Beastwood/Beastwood_4-4-26_floor_tiles_06_diff_1k.png"
 dest_files=["res://.godot/imported/Beastwood_4-4-26_floor_tiles_06_diff_1k.png-fe05066ea3106bfc4f6abbf968f76dea.s3tc.ctex"]
+=======
+source_file="res://Beastwood/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png"
+dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png-b76f089533c4b85d32e9c2533eee1cdb.etc2.ctex"]
+>>>>>>> 057bf21 (not sure what i worked on last):Beastwood/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png.import
 
 [params]
 

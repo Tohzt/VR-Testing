@@ -2,10 +2,15 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD:Beastwood/Beastwood_4-4-26_blue_painted_planks_diff_1k.png.import
 uid="uid://cg5boendpna4d"
 path.s3tc="res://.godot/imported/Beastwood_4-4-26_blue_painted_planks_diff_1k.png-fe0261d0ca5bcb560291f50f83e66655.s3tc.ctex"
+=======
+uid="uid://c5su374jsf0dn"
+path.etc2="res://.godot/imported/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png-fa7f67a1215c155a2c15c70494e21866.etc2.ctex"
+>>>>>>> 057bf21 (not sure what i worked on last):Beastwood/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png.import
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -14,8 +19,13 @@ generator_parameters={
 
 [deps]
 
+<<<<<<< HEAD:Beastwood/Beastwood_4-4-26_blue_painted_planks_diff_1k.png.import
 source_file="res://Beastwood/Beastwood_4-4-26_blue_painted_planks_diff_1k.png"
 dest_files=["res://.godot/imported/Beastwood_4-4-26_blue_painted_planks_diff_1k.png-fe0261d0ca5bcb560291f50f83e66655.s3tc.ctex"]
+=======
+source_file="res://Beastwood/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png"
+dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png-fa7f67a1215c155a2c15c70494e21866.etc2.ctex"]
+>>>>>>> 057bf21 (not sure what i worked on last):Beastwood/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png.import
 
 [params]
 

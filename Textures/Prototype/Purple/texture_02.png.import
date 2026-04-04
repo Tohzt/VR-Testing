@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpnib741eaq5l"
-path.s3tc="res://.godot/imported/texture_02.png-2ac8ed7b1f7b2e9149bdcf8a0001a7b6.s3tc.ctex"
+path.etc2="res://.godot/imported/texture_02.png-2ac8ed7b1f7b2e9149bdcf8a0001a7b6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Prototype/Purple/texture_02.png"
-dest_files=["res://.godot/imported/texture_02.png-2ac8ed7b1f7b2e9149bdcf8a0001a7b6.s3tc.ctex"]
+dest_files=["res://.godot/imported/texture_02.png-2ac8ed7b1f7b2e9149bdcf8a0001a7b6.etc2.ctex"]
 
 [params]
 

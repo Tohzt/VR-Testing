@@ -2,10 +2,15 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD:Beastwood/Beastwood_4-4-26_dirty_carpet_diff_1k.png.import
 uid="uid://6a2q8lrcpkqe"
 path.s3tc="res://.godot/imported/Beastwood_4-4-26_dirty_carpet_diff_1k.png-b88c887d94eab2058cab914e3fb777e5.s3tc.ctex"
+=======
+uid="uid://cxomh0laj40y"
+path.etc2="res://.godot/imported/Beastwood_InteriorUpdate_dirty_carpet_diff_1k.png-a7cb8f4c730f793fae35c2b953032db3.etc2.ctex"
+>>>>>>> 057bf21 (not sure what i worked on last):Beastwood/Beastwood_InteriorUpdate_dirty_carpet_diff_1k.png.import
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -14,8 +19,13 @@ generator_parameters={
 
 [deps]
 
+<<<<<<< HEAD:Beastwood/Beastwood_4-4-26_dirty_carpet_diff_1k.png.import
 source_file="res://Beastwood/Beastwood_4-4-26_dirty_carpet_diff_1k.png"
 dest_files=["res://.godot/imported/Beastwood_4-4-26_dirty_carpet_diff_1k.png-b88c887d94eab2058cab914e3fb777e5.s3tc.ctex"]
+=======
+source_file="res://Beastwood/Beastwood_InteriorUpdate_dirty_carpet_diff_1k.png"
+dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_dirty_carpet_diff_1k.png-a7cb8f4c730f793fae35c2b953032db3.etc2.ctex"]
+>>>>>>> 057bf21 (not sure what i worked on last):Beastwood/Beastwood_InteriorUpdate_dirty_carpet_diff_1k.png.import
 
 [params]
 

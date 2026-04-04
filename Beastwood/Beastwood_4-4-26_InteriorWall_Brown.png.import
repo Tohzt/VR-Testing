@@ -2,10 +2,15 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD:Beastwood/Beastwood_4-4-26_InteriorWall_Brown.png.import
 uid="uid://bx2vjqechu5oy"
 path.s3tc="res://.godot/imported/Beastwood_4-4-26_InteriorWall_Brown.png-f848e752c636d3733b2ef4813ca8418e.s3tc.ctex"
+=======
+uid="uid://gxqkp4y0ce2"
+path.etc2="res://.godot/imported/Beastwood_InteriorUpdate_roof_slates_03_diff_1k.png-aa0ca33cc3f147f42e19e077b516b64f.etc2.ctex"
+>>>>>>> 057bf21 (not sure what i worked on last):Beastwood/Beastwood_InteriorUpdate_roof_slates_03_diff_1k.png.import
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -14,8 +19,13 @@ generator_parameters={
 
 [deps]
 
+<<<<<<< HEAD:Beastwood/Beastwood_4-4-26_InteriorWall_Brown.png.import
 source_file="res://Beastwood/Beastwood_4-4-26_InteriorWall_Brown.png"
 dest_files=["res://.godot/imported/Beastwood_4-4-26_InteriorWall_Brown.png-f848e752c636d3733b2ef4813ca8418e.s3tc.ctex"]
+=======
+source_file="res://Beastwood/Beastwood_InteriorUpdate_roof_slates_03_diff_1k.png"
+dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_roof_slates_03_diff_1k.png-aa0ca33cc3f147f42e19e077b516b64f.etc2.ctex"]
+>>>>>>> 057bf21 (not sure what i worked on last):Beastwood/Beastwood_InteriorUpdate_roof_slates_03_diff_1k.png.import
 
 [params]
 
