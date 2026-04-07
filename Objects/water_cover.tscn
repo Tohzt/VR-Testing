@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dje47g3w7qod2"]
+
+[ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_e5670"]
+[ext_resource type="Texture2D" uid="uid://bjpeeofp8bnuf" path="res://Beastwood/Beastwood_InteriorUpdate_InteriorWall_Brown.png" id="2_pi2e4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4qa0"]
+albedo_texture = ExtResource("2_pi2e4")
+uv1_scale = Vector3(0.605, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mmjae"]
+material = SubResource("StandardMaterial3D_o4qa0")
+size = Vector3(0.205, 0.01, 0.222)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6nisn"]
+size = Vector3(0.205, 0.01, 0.222)
+
+[node name="WaterCover" type="RigidBody3D" unique_id=926951655]
+collision_layer = 4
+script = ExtResource("1_e5670")
+picked_up_layer = 65540
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=574139195]
+mesh = SubResource("BoxMesh_mmjae")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=2114439636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00018310547, 0)
+shape = SubResource("BoxShape3D_6nisn")
