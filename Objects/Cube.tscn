@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://cymdn1dm82reg"]
 
 [ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_nf6a8"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="2_7dbb0"]
+[ext_resource type="Animation" uid="uid://db62hs5s4n2b3" path="res://addons/godot-xr-tools/hands/animations/left/Grip 4.res" id="3_ucncu"]
+[ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="4_yg4d5"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_44w2e"]
+[ext_resource type="Animation" uid="uid://d1xnpyc08njjx" path="res://addons/godot-xr-tools/hands/animations/right/Grip 4.res" id="6_iwolk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pkg17"]
 size = Vector3(0.1, 0.1, 0.1)
@@ -12,13 +17,32 @@ albedo_color = Color(0.15388322, 0.22111452, 0.9999959, 1)
 material = SubResource("StandardMaterial3D_l2yo4")
 size = Vector3(0.1, 0.1, 0.1)
 
+[sub_resource type="Resource" id="Resource_6tgd5"]
+script = ExtResource("4_yg4d5")
+closed_pose = ExtResource("3_ucncu")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="Resource" id="Resource_dnyer"]
+script = ExtResource("4_yg4d5")
+closed_pose = ExtResource("6_iwolk")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
 [node name="Cube" type="RigidBody3D" unique_id=1897529184]
 collision_layer = 4
 script = ExtResource("1_nf6a8")
 picked_up_layer = 65540
+ranged_grab_speed = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=107137558]
 shape = SubResource("BoxShape3D_pkg17")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=193028164]
 mesh = SubResource("BoxMesh_ec2tb")
+
+[node name="GrabPointHandLeft" parent="." unique_id=325195282 instance=ExtResource("2_7dbb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051288903, 0.04220192, -0.07948004)
+hand_pose = SubResource("Resource_6tgd5")
+
+[node name="GrabPointHandRight" parent="." unique_id=1951478860 instance=ExtResource("5_44w2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049454898, 0.042432062, -0.08101543)
+hand_pose = SubResource("Resource_dnyer")
