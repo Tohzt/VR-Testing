@@ -3,6 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://c6xykg2lp7hp6" path="res://Textures/Prototype/Light/texture_08.png" id="1_i487d"]
 [ext_resource type="Texture2D" uid="uid://dpnib741eaq5l" path="res://Textures/Prototype/Purple/texture_02.png" id="2_sssk5"]
 [ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="3_l5yow"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_55lci"]
+[ext_resource type="Animation" uid="uid://daqddcrbpam0c" path="res://addons/godot-xr-tools/hands/animations/right/Grip 1.res" id="5_vg6is"]
+[ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="6_ngrak"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="7_vtx8o"]
+[ext_resource type="Animation" uid="uid://dqa0h82y3qn1t" path="res://addons/godot-xr-tools/hands/animations/left/Grip 1.res" id="8_2ckfp"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l5yow"]
 points = PackedVector3Array(0.625, 0.5, 1.125, 0.625, -0.5, 1.125, 0.625, 0.5, -1.125, -0.625, 0.5, 1.125, -0.625, -0.5, 1.125, 0.625, -0.5, -1.125, -0.625, 0.5, -1.125, -0.625, -0.5, -1.125)
@@ -99,6 +104,16 @@ material = SubResource("StandardMaterial3D_ay6n4")
 inner_radius = 0.064
 outer_radius = 0.1
 
+[sub_resource type="Resource" id="Resource_5a54b"]
+script = ExtResource("6_ngrak")
+closed_pose = ExtResource("5_vg6is")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="Resource" id="Resource_p67t8"]
+script = ExtResource("6_ngrak")
+closed_pose = ExtResource("8_2ckfp")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sssk5"]
 friction = 0.05
 bounce = 0.7
@@ -119,6 +134,7 @@ height = 0.025
 [node name="Air Hockey" type="Node3D" unique_id=485288983]
 
 [node name="Table" type="StaticBody3D" parent="." unique_id=243692225]
+collision_layer = 2
 
 [node name="Table Base" type="CollisionShape3D" parent="Table" unique_id=1478853415]
 shape = SubResource("ConvexPolygonShape3D_l5yow")
@@ -158,9 +174,9 @@ mesh = SubResource("BoxMesh_2ckfp")
 [node name="Paddle Red" type="RigidBody3D" parent="." unique_id=1897529184]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7161399, -0.77742696)
 collision_layer = 5
-freeze_mode = 1
 axis_lock_angular_x = true
 axis_lock_angular_z = true
+freeze_mode = 1
 script = ExtResource("3_l5yow")
 picked_up_layer = 65541
 
@@ -182,9 +198,9 @@ mesh = SubResource("TorusMesh_egv43")
 [node name="Paddle Blue" type="RigidBody3D" parent="." unique_id=729027493]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7161399, 0.76967454)
 collision_layer = 5
-freeze_mode = 1
 axis_lock_angular_x = true
 axis_lock_angular_z = true
+freeze_mode = 1
 script = ExtResource("3_l5yow")
 picked_up_layer = 65541
 
@@ -203,14 +219,23 @@ mesh = SubResource("CapsuleMesh_ls253")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0043265224, 0)
 mesh = SubResource("TorusMesh_dt2fv")
 
+[node name="GrabPointHandRight" parent="Paddle Blue" unique_id=1330911209 instance=ExtResource("4_55lci")]
+transform = Transform3D(0.40258694, -0.9153818, 0, 0.9153818, 0.40258694, 0, 0, 0, 1, -0.033474952, 0.07908028, -0.08884895)
+hand_pose = SubResource("Resource_5a54b")
+
+[node name="GrabPointHandLeft" parent="Paddle Blue" unique_id=1155395660 instance=ExtResource("7_vtx8o")]
+transform = Transform3D(0.38123173, 0.92447954, 0, -0.92447954, 0.38123173, 0, 0, 0, 1, 0.03013599, 0.07433009, -0.08504975)
+hand_pose = SubResource("Resource_p67t8")
+
 [node name="Puck" type="RigidBody3D" parent="." unique_id=1800290140]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5125, 0.3559086)
-mass = 0.05
-physics_material_override = SubResource("PhysicsMaterial_sssk5")
-linear_damp = 0.5
-can_sleep = false
+collision_mask = 3
 axis_lock_angular_x = true
 axis_lock_angular_z = true
+mass = 0.05
+physics_material_override = SubResource("PhysicsMaterial_sssk5")
+can_sleep = false
+linear_damp = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Puck" unique_id=763954020]
 shape = SubResource("CylinderShape3D_tmdll")
