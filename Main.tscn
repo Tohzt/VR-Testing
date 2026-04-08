@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://07y08lx8mbw2" path="res://Beastwood/Beastwood.tscn" id="7_lgr22"]
 [ext_resource type="PackedScene" uid="uid://un5f2rbg8df4" path="res://Objects/Bernie.tscn" id="7_trn2v"]
 [ext_resource type="PackedScene" uid="uid://c4qhwniu1cdlo" path="res://Objects/Bong.tscn" id="8_trn2v"]
+[ext_resource type="PackedScene" uid="uid://dye3al27lo6pr" path="res://Objects/Zippo.tscn" id="9_03owx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mf4mk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -70,4 +71,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4355426, 0.42523718, 0.0273
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24629277, 1.0199999, -0.030947924)
 
 [node name="Bong" parent="." unique_id=535430157 instance=ExtResource("8_trn2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32909226, 1.1490631, 0.06308389)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26856995, 1.0130341, 0.03691995)
+
+[node name="Zippo" parent="." unique_id=1442560392 instance=ExtResource("9_03owx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0018471479, 1.0325, 0.122924626)
