@@ -3,22 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="1_6ysni"]
 [ext_resource type="Script" uid="uid://bktdyd8n2kbea" path="res://Hand.gd" id="1_xhfnw"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="2_tok1r"]
-[ext_resource type="Script" uid="uid://ck4yn3hxuobj7" path="res://addons/godot-xr-tools/player/player_body.gd" id="2_vlldt"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="3_ddoul"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="5_s1rgi"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="6_s1rgi"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="7_vlldt"]
+[ext_resource type="PackedScene" uid="uid://c2q5phg8w08o" path="res://addons/godot-xr-tools/functions/movement_jump.tscn" id="8_s1rgi"]
 
 [node name="Player" type="Node3D" unique_id=1487023001]
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1320749375]
 
-[node name="PlayerBody" type="CharacterBody3D" parent="XROrigin3D" unique_id=111404520 groups=["player_body"] instance=ExtResource("1_6ysni")]
-process_priority = -100
-process_physics_priority = -100
-collision_layer = 524288
-collision_mask = 1023
-script = ExtResource("2_vlldt")
+[node name="PlayerBody" parent="XROrigin3D" unique_id=111404520 instance=ExtResource("1_6ysni")]
+motion_mode = 1
+player_height_max = 2.0
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1654719701]
 
@@ -43,3 +40,6 @@ script = ExtResource("1_xhfnw")
 turn_mode = 2
 
 [node name="FunctionPickup" parent="XROrigin3D/RightHand" unique_id=1606174339 instance=ExtResource("6_s1rgi")]
+
+[node name="MovementJump" parent="XROrigin3D/RightHand" unique_id=1002256976 instance=ExtResource("8_s1rgi")]
+jump_button_action = "ax_touch"

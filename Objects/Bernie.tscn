@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://un5f2rbg8df4"]
+
+[ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_jltl0"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="2_jljq6"]
+[ext_resource type="Animation" uid="uid://c8qmcuyaltdnw" path="res://addons/godot-xr-tools/hands/animations/left/PingPong.res" id="3_jltl0"]
+[ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="4_xmn35"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_46aix"]
+[ext_resource type="Animation" uid="uid://c8hn123uon74u" path="res://addons/godot-xr-tools/hands/animations/right/PingPong.res" id="6_jljq6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fim61"]
+bounce = 0.07
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xmn35"]
+radius = 0.02
+
+[sub_resource type="SphereMesh" id="SphereMesh_46aix"]
+radius = 0.02
+height = 0.04
+
+[sub_resource type="Resource" id="Resource_6tgd5"]
+script = ExtResource("4_xmn35")
+closed_pose = ExtResource("3_jltl0")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="Resource" id="Resource_dnyer"]
+script = ExtResource("4_xmn35")
+closed_pose = ExtResource("6_jljq6")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[node name="Bernie" type="RigidBody3D" unique_id=1897529184]
+collision_layer = 4
+physics_material_override = SubResource("PhysicsMaterial_fim61")
+script = ExtResource("1_jltl0")
+picked_up_layer = 65540
+ranged_grab_method = 0
+second_hand_grab = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=107137558]
+shape = SubResource("SphereShape3D_xmn35")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=193028164]
+mesh = SubResource("SphereMesh_46aix")
+
+[node name="GrabPointHandLeft" parent="." unique_id=325195282 instance=ExtResource("2_jljq6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03690032, 0.032726295, -0.060687594)
+hand_pose = SubResource("Resource_6tgd5")
+
+[node name="GrabPointHandRight" parent="." unique_id=1951478860 instance=ExtResource("5_46aix")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041312456, 0.034677193, -0.056323122)
+hand_pose = SubResource("Resource_dnyer")
