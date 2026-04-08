@@ -7,10 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_r33ue"]
 [ext_resource type="Animation" uid="uid://do01jton6rk42" path="res://addons/godot-xr-tools/hands/animations/right/Cup.res" id="7_a1eex"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_o37i1"]
-height = 0.8387451
-radius = 0.041503906
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xoqrc"]
 resource_name = "bong"
 transparency = 4
@@ -83,9 +79,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ppdsd")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_o37i1"]
+height = 0.46868896
+radius = 0.030761719
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_v0b4h"]
-height = 0.24761963
-radius = 0.16601563
+height = 0.14871216
+radius = 0.09814453
 
 [sub_resource type="Resource" id="Resource_6tgd5"]
 script = ExtResource("4_0r5fd")
@@ -104,24 +104,22 @@ picked_up_layer = 65540
 ranged_grab_method = 0
 second_hand_grab = 2
 
-[node name="Stem" type="CollisionShape3D" parent="." unique_id=107137558]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0011973679, 0.41693115, 0)
-shape = SubResource("CylinderShape3D_o37i1")
-
 [node name="bong2" type="MeshInstance3D" parent="." unique_id=2110359764]
-transform = Transform3D(0.014157863, 0, 0, 0, 0.07419085, 0.010907522, 0, -0.089655034, 0.009026133, 0.0035653263, 0.13227415, -0.047582626)
+transform = Transform3D(0.008, 0, 0, 0, 0.042077303, 0.0061633717, 0, -0.050847813, 0.0051002796, 0.0021858364, 0.07019603, -0.02688986)
 mesh = SubResource("ArrayMesh_57gle")
 
+[node name="Stem" type="CollisionShape3D" parent="." unique_id=107137558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0011973679, 0.23190308, 0)
+shape = SubResource("CylinderShape3D_o37i1")
+
 [node name="Base" type="CollisionShape3D" parent="." unique_id=542757265]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12142944, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07197571, 0)
 shape = SubResource("CylinderShape3D_v0b4h")
 
 [node name="GrabPointHandLeft" parent="." unique_id=325195282 instance=ExtResource("2_jlvfe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014786206, 0.6075892, -0.062748194)
-visible = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008543322, 0.36854002, -0.06568536)
 hand_pose = SubResource("Resource_6tgd5")
 
 [node name="GrabPointHandRight" parent="." unique_id=1951478860 instance=ExtResource("5_r33ue")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016977638, 0.48496556, -0.06760967)
-visible = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016977638, 0.281631, -0.06760967)
 hand_pose = SubResource("Resource_dnyer")
