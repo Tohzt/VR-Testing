@@ -3,10 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="1_6ysni"]
 [ext_resource type="Script" uid="uid://bktdyd8n2kbea" path="res://Hand.gd" id="1_xhfnw"]
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="2_tok1r"]
+[ext_resource type="PackedScene" uid="uid://clt88d5d1dje4" path="res://addons/godot-xr-tools/functions/movement_crouch.tscn" id="3_0j2ni"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="3_ddoul"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="5_s1rgi"]
+[ext_resource type="Material" uid="uid://ds2dpvbpht0ea" path="res://addons/godot-xr-tools/hands/materials/labglove.tres" id="5_v0k0e"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="6_s1rgi"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="7_vlldt"]
+[ext_resource type="PackedScene" uid="uid://c2q5phg8w08o" path="res://addons/godot-xr-tools/functions/movement_jump.tscn" id="8_5wa8t"]
 
 [node name="Player" type="Node3D" unique_id=1487023001]
 
@@ -21,7 +24,11 @@ player_height_max = 2.0
 tracker = &"left_hand"
 script = ExtResource("1_xhfnw")
 
+[node name="MovementCrouch" parent="XROrigin3D/LeftHand" unique_id=688414984 instance=ExtResource("3_0j2ni")]
+crouch_button_action = "ax_button"
+
 [node name="LeftHand" parent="XROrigin3D/LeftHand" unique_id=1466062177 instance=ExtResource("2_tok1r")]
+hand_material_override = ExtResource("5_v0k0e")
 
 [node name="MovementDirect" parent="XROrigin3D/LeftHand" unique_id=1613920494 instance=ExtResource("5_s1rgi")]
 strafe = true
@@ -32,7 +39,11 @@ strafe = true
 tracker = &"right_hand"
 script = ExtResource("1_xhfnw")
 
+[node name="MovementJump" parent="XROrigin3D/RightHand" unique_id=1419229969 instance=ExtResource("8_5wa8t")]
+jump_button_action = "ax_button"
+
 [node name="RightHand" parent="XROrigin3D/RightHand" unique_id=1674403880 instance=ExtResource("3_ddoul")]
+hand_material_override = ExtResource("5_v0k0e")
 
 [node name="MovementTurn" parent="XROrigin3D/RightHand" unique_id=94780583 instance=ExtResource("7_vlldt")]
 turn_mode = 2
