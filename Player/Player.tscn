@@ -14,6 +14,7 @@
 [node name="Player" type="Node3D" unique_id=1487023001]
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1320749375]
+world_scale = 1.0
 
 [node name="PlayerBody" parent="XROrigin3D" unique_id=111404520 instance=ExtResource("1_6ysni")]
 player_height_max = 2.0
@@ -25,7 +26,6 @@ tracker = &"left_hand"
 script = ExtResource("1_xhfnw")
 
 [node name="MovementCrouch" parent="XROrigin3D/LeftHand" unique_id=688414984 instance=ExtResource("3_0j2ni")]
-crouch_button_action = "ax_button"
 
 [node name="LeftHand" parent="XROrigin3D/LeftHand" unique_id=1466062177 instance=ExtResource("2_tok1r")]
 hand_material_override = ExtResource("5_v0k0e")
