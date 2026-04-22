@@ -2,21 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjpeeofp8bnuf"
-path.s3tc="res://.godot/imported/Beastwood_InteriorUpdate_InteriorWall_Brown.png-3ddca159206a7ae65ebee66ab67d9003.s3tc.ctex"
-path.etc2="res://.godot/imported/Beastwood_InteriorUpdate_InteriorWall_Brown.png-3ddca159206a7ae65ebee66ab67d9003.etc2.ctex"
+uid="uid://cxqfebktlrqwo"
+path.s3tc="res://.godot/imported/Epic_BlueSunset_EquiRect_flat.png-8b31e7f8642e7771b40b374ce8db25f9.s3tc.ctex"
+path.etc2="res://.godot/imported/Epic_BlueSunset_EquiRect_flat.png-8b31e7f8642e7771b40b374ce8db25f9.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "963e9a54139c5cf750ac764653528f81"
-}
 
 [deps]
 
-source_file="res://Beastwood/Beastwood_InteriorUpdate_InteriorWall_Brown.png"
-dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_InteriorWall_Brown.png-3ddca159206a7ae65ebee66ab67d9003.s3tc.ctex", "res://.godot/imported/Beastwood_InteriorUpdate_InteriorWall_Brown.png-3ddca159206a7ae65ebee66ab67d9003.etc2.ctex"]
+source_file="res://Textures/Skyboxes/Epic_BlueSunset_EquiRect_flat.png"
+dest_files=["res://.godot/imported/Epic_BlueSunset_EquiRect_flat.png-8b31e7f8642e7771b40b374ce8db25f9.s3tc.ctex", "res://.godot/imported/Epic_BlueSunset_EquiRect_flat.png-8b31e7f8642e7771b40b374ce8db25f9.etc2.ctex"]
 
 [params]
 

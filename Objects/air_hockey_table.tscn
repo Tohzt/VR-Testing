@@ -134,7 +134,7 @@ height = 0.025
 [node name="Air Hockey" type="Node3D" unique_id=485288983]
 
 [node name="Table" type="StaticBody3D" parent="." unique_id=243692225]
-collision_layer = 2
+collision_layer = 5
 
 [node name="Table Base" type="CollisionShape3D" parent="Table" unique_id=1478853415]
 shape = SubResource("ConvexPolygonShape3D_l5yow")

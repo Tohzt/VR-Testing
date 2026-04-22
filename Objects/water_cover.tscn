@@ -1,244 +1,53 @@
 [gd_scene format=3 uid="uid://dje47g3w7qod2"]
 
 [ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_e5670"]
-[ext_resource type="Texture2D" uid="uid://c6xykg2lp7hp6" path="res://Textures/Prototype/Light/texture_08.png" id="1_p04ex"]
-[ext_resource type="Texture2D" uid="uid://dpnib741eaq5l" path="res://Textures/Prototype/Purple/texture_02.png" id="2_fyv86"]
+[ext_resource type="Texture2D" uid="uid://bjpeeofp8bnuf" path="res://Beastwood/Beastwood_InteriorUpdate_InteriorWall_Brown.png" id="2_pi2e4"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_qplc7"]
+[ext_resource type="Animation" uid="uid://cnng6xumhw7cx" path="res://addons/godot-xr-tools/hands/animations/left/Rounded.res" id="4_q2v0v"]
 [ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="5_okyn8"]
-[ext_resource type="Animation" uid="uid://daqddcrbpam0c" path="res://addons/godot-xr-tools/hands/animations/right/Grip 1.res" id="5_vm26k"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="6_okyn8"]
-[ext_resource type="Animation" uid="uid://dqa0h82y3qn1t" path="res://addons/godot-xr-tools/hands/animations/left/Grip 1.res" id="8_c6015"]
+[ext_resource type="Animation" uid="uid://dlxa6f6hwurka" path="res://addons/godot-xr-tools/hands/animations/left/Default pose.res" id="7_p04ex"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l5yow"]
-points = PackedVector3Array(0.625, 0.5, 1.125, 0.625, -0.5, 1.125, 0.625, 0.5, -1.125, -0.625, 0.5, 1.125, -0.625, -0.5, 1.125, 0.625, -0.5, -1.125, -0.625, 0.5, -1.125, -0.625, -0.5, -1.125)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4qa0"]
+albedo_texture = ExtResource("2_pi2e4")
+uv1_scale = Vector3(0.605, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tw1c5"]
-albedo_texture = ExtResource("1_p04ex")
+[sub_resource type="BoxMesh" id="BoxMesh_mmjae"]
+material = SubResource("StandardMaterial3D_o4qa0")
+size = Vector3(0.205, 0.01, 0.222)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwrd6"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_6nisn"]
+size = Vector3(0.205, 0.01, 0.222)
 
-[sub_resource type="BoxMesh" id="BoxMesh_g7wqy"]
-material = SubResource("StandardMaterial3D_dwrd6")
-size = Vector3(1.25, 1, 2.25)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_55lci"]
-points = PackedVector3Array(-0.05, -0.55, -1.225, 0.05, -0.55, -1.225, -0.05, -0.55, 1.225, -0.05, 0.55, -1.225, 0.05, 0.55, -1.225, 0.05, -0.55, 1.225, -0.05, 0.55, 1.225, 0.05, 0.55, 1.225)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7wqy"]
-albedo_texture = ExtResource("2_fyv86")
-uv1_triplanar = true
-uv2_world_triplanar = true
-
-[sub_resource type="BoxMesh" id="BoxMesh_vg6is"]
-material = SubResource("StandardMaterial3D_g7wqy")
-size = Vector3(0.1, 1.1, 2.45)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ngrak"]
-points = PackedVector3Array(-0.05, -0.55, -1.225, 0.05, -0.55, -1.225, -0.05, -0.55, 1.225, -0.05, 0.55, -1.225, 0.05, 0.55, -1.225, 0.05, -0.55, 1.225, -0.05, 0.55, 1.225, 0.05, 0.55, 1.225)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vtx8o"]
-points = PackedVector3Array(0.625, 0.55, 0.05, 0.625, 0.55, -0.05, -0.625, 0.55, 0.05, 0.625, -0.55, 0.05, 0.625, -0.55, -0.05, -0.625, 0.55, -0.05, -0.625, -0.55, 0.05, -0.625, -0.55, -0.05)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_55lci"]
-albedo_texture = ExtResource("2_fyv86")
-uv1_triplanar = true
-
-[sub_resource type="BoxMesh" id="BoxMesh_2ckfp"]
-material = SubResource("StandardMaterial3D_55lci")
-size = Vector3(1.25, 1.1, 0.1)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5a54b"]
-points = PackedVector3Array(0.625, 0.55, 0.05, 0.625, 0.55, -0.05, -0.625, 0.55, 0.05, 0.625, -0.55, 0.05, 0.625, -0.55, -0.05, -0.625, 0.55, -0.05, -0.625, -0.55, 0.05, -0.625, -0.55, -0.05)
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_vg6is"]
-height = 0.041015625
-radius = 0.1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ngrak"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_vtx8o"]
-material = SubResource("StandardMaterial3D_ngrak")
-top_radius = 0.1
-bottom_radius = 0.1
-height = 0.025
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ckfp"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_5a54b"]
-material = SubResource("StandardMaterial3D_2ckfp")
-radius = 0.025
-height = 0.1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p67t8"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="TorusMesh" id="TorusMesh_egv43"]
-material = SubResource("StandardMaterial3D_p67t8")
-inner_radius = 0.064
-outer_radius = 0.1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hyfla"]
-albedo_color = Color(0, 0, 1, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_tdi4g"]
-material = SubResource("StandardMaterial3D_hyfla")
-top_radius = 0.1
-bottom_radius = 0.1
-height = 0.025
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8xnes"]
-albedo_color = Color(0, 0, 1, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ls253"]
-material = SubResource("StandardMaterial3D_8xnes")
-radius = 0.025
-height = 0.1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ay6n4"]
-albedo_color = Color(0, 0, 1, 1)
-
-[sub_resource type="TorusMesh" id="TorusMesh_dt2fv"]
-material = SubResource("StandardMaterial3D_ay6n4")
-inner_radius = 0.064
-outer_radius = 0.1
-
-[sub_resource type="Resource" id="Resource_5a54b"]
+[sub_resource type="Resource" id="Resource_p04ex"]
 script = ExtResource("5_okyn8")
-closed_pose = ExtResource("5_vm26k")
+closed_pose = ExtResource("4_q2v0v")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
-[sub_resource type="Resource" id="Resource_p67t8"]
+[sub_resource type="Resource" id="Resource_fyv86"]
 script = ExtResource("5_okyn8")
-closed_pose = ExtResource("8_c6015")
+closed_pose = ExtResource("7_p04ex")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sssk5"]
-friction = 0.05
-bounce = 0.7
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_tmdll"]
-height = 0.025
-radius = 0.08
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfcqh"]
-albedo_color = Color(1, 0.2627451, 0.24313726, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_mbat3"]
-material = SubResource("StandardMaterial3D_bfcqh")
-top_radius = 0.08
-bottom_radius = 0.08
-height = 0.025
-
-[node name="Air Hockey" type="Node3D" unique_id=485288983]
-
-[node name="Table" type="StaticBody3D" parent="." unique_id=243692225]
-collision_layer = 2
-
-[node name="Table Base" type="CollisionShape3D" parent="Table" unique_id=1478853415]
-shape = SubResource("ConvexPolygonShape3D_l5yow")
-
-[node name="Table Base" type="MeshInstance3D" parent="Table/Table Base" unique_id=634951770]
-material_override = SubResource("StandardMaterial3D_tw1c5")
-mesh = SubResource("BoxMesh_g7wqy")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Table" unique_id=1311606933]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.675, 0.05, 0)
-shape = SubResource("ConvexPolygonShape3D_55lci")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Table/CollisionShape3D2" unique_id=857832215]
-mesh = SubResource("BoxMesh_vg6is")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Table" unique_id=1580021284]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.675, 0.05, 0)
-shape = SubResource("ConvexPolygonShape3D_ngrak")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Table/CollisionShape3D3" unique_id=1007386995]
-mesh = SubResource("BoxMesh_vg6is")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Table" unique_id=114335397]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 1.176)
-shape = SubResource("ConvexPolygonShape3D_vtx8o")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Table/CollisionShape3D4" unique_id=1634200445]
-mesh = SubResource("BoxMesh_2ckfp")
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Table" unique_id=419826585]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, -1.175)
-shape = SubResource("ConvexPolygonShape3D_5a54b")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Table/CollisionShape3D5" unique_id=270679549]
-mesh = SubResource("BoxMesh_2ckfp")
-
-[node name="Paddle Red" type="RigidBody3D" parent="." unique_id=1897529184]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7161399, -0.77742696)
-collision_layer = 5
-axis_lock_angular_x = true
-axis_lock_angular_z = true
-freeze_mode = 1
+[node name="WaterCover" type="RigidBody3D" unique_id=926951655]
+collision_layer = 4
 script = ExtResource("1_e5670")
-picked_up_layer = 65541
+picked_up_layer = 65540
+ranged_grab_method = 0
+second_hand_grab = 1
+ranged_grab_speed = 0.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Paddle Red" unique_id=107137558]
-shape = SubResource("CylinderShape3D_vg6is")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=574139195]
+mesh = SubResource("BoxMesh_mmjae")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Paddle Red/CollisionShape3D" unique_id=193028164]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008159459, 0)
-mesh = SubResource("CylinderMesh_vtx8o")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=2114439636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00018310547, 0)
+shape = SubResource("BoxShape3D_6nisn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Paddle Red/CollisionShape3D" unique_id=570147626]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034641862, 0)
-mesh = SubResource("CapsuleMesh_5a54b")
+[node name="GrabPointHandRight" parent="." unique_id=1959613504 instance=ExtResource("3_qplc7")]
+transform = Transform3D(-0.019865533, -0.7842651, -0.6201077, 0.99967927, -0.025322003, 0, -0.015702369, -0.6199088, 0.7845167, -0.0427123, -0.019820467, -0.042853624)
+hand_pose = SubResource("Resource_p04ex")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Paddle Red/CollisionShape3D" unique_id=1562579454]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0043265224, 0)
-mesh = SubResource("TorusMesh_egv43")
-
-[node name="Paddle Blue" type="RigidBody3D" parent="." unique_id=729027493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7161399, 0.76967454)
-collision_layer = 5
-axis_lock_angular_x = true
-axis_lock_angular_z = true
-freeze_mode = 1
-script = ExtResource("1_e5670")
-picked_up_layer = 65541
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Paddle Blue" unique_id=745150951]
-shape = SubResource("CylinderShape3D_vg6is")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Paddle Blue/CollisionShape3D" unique_id=296632132]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008159459, 0)
-mesh = SubResource("CylinderMesh_tdi4g")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Paddle Blue/CollisionShape3D" unique_id=1243638647]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034641862, 0)
-mesh = SubResource("CapsuleMesh_ls253")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Paddle Blue/CollisionShape3D" unique_id=1716664175]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0043265224, 0)
-mesh = SubResource("TorusMesh_dt2fv")
-
-[node name="GrabPointHandRight" parent="Paddle Blue" unique_id=1330911209 instance=ExtResource("3_qplc7")]
-transform = Transform3D(0.40258694, -0.9153818, 0, 0.9153818, 0.40258694, 0, 0, 0, 1, -0.033474952, 0.07908028, -0.08884895)
-hand_pose = SubResource("Resource_5a54b")
-
-[node name="GrabPointHandLeft" parent="Paddle Blue" unique_id=1155395660 instance=ExtResource("6_okyn8")]
-transform = Transform3D(0.38123173, 0.92447954, 0, -0.92447954, 0.38123173, 0, 0, 0, 1, 0.03013599, 0.07433009, -0.08504975)
-hand_pose = SubResource("Resource_p67t8")
-
-[node name="Puck" type="RigidBody3D" parent="." unique_id=1800290140]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5125, 0.3559086)
-collision_mask = 3
-axis_lock_angular_x = true
-axis_lock_angular_z = true
-mass = 0.05
-physics_material_override = SubResource("PhysicsMaterial_sssk5")
-can_sleep = false
-linear_damp = 0.5
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Puck" unique_id=763954020]
-shape = SubResource("CylinderShape3D_tmdll")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Puck/CollisionShape3D" unique_id=1382202002]
-mesh = SubResource("CylinderMesh_mbat3")
+[node name="GrabPointHandLeft" parent="." unique_id=48953754 instance=ExtResource("6_okyn8")]
+transform = Transform3D(0.06860125, 0.7948495, -0.6029165, -0.9973021, 0.03881396, -0.062305346, -0.026121797, 0.6055641, 0.7953677, -0.0052629933, -0.013672411, 0.04281439)
+hand_pose = SubResource("Resource_fyv86")

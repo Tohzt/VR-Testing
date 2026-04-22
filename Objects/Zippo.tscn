@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dye3al27lo6pr"]
+
+[ext_resource type="Script" uid="uid://bfrlpbsqg5lqr" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_fu5tj"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="2_hvkaa"]
+[ext_resource type="Animation" uid="uid://m5x2m8x3tcel" path="res://addons/godot-xr-tools/hands/animations/left/Pinch Tight.res" id="3_fu5tj"]
+[ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="4_kvcqp"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_ipbpn"]
+[ext_resource type="Animation" uid="uid://ca21ej1p3g2yt" path="res://addons/godot-xr-tools/hands/animations/right/Pinch Tight.res" id="6_hvkaa"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yy303"]
+points = PackedVector3Array(-0.015, -0.0325, -0.01, -0.015, -0.0325, 0.01, -0.015, 0.0325, -0.01, 0.0150000015, -0.0325, -0.01, 0.0150000015, -0.0325, 0.01, -0.015, 0.0325, 0.01, 0.0150000015, 0.0325, -0.01, 0.0150000015, 0.0325, 0.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2yo4"]
+albedo_color = Color(0.15388322, 0.22111452, 0.9999959, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ec2tb"]
+material = SubResource("StandardMaterial3D_l2yo4")
+size = Vector3(0.03, 0.065, 0.02)
+
+[sub_resource type="Gradient" id="Gradient_kvcqp"]
+colors = PackedColorArray(1, 1, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ipbpn"]
+gradient = SubResource("Gradient_kvcqp")
+width = 165
+fill = 1
+fill_from = Vector2(0.6081731, 0.8738356)
+fill_to = Vector2(0.29567307, 0.5391752)
+repeat = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_542gj"]
+albedo_texture = SubResource("GradientTexture2D_ipbpn")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 10.928324
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_swihr"]
+material = SubResource("StandardMaterial3D_542gj")
+size = Vector3(0.009, 0.021, 0.006)
+
+[sub_resource type="Resource" id="Resource_6tgd5"]
+script = ExtResource("4_kvcqp")
+closed_pose = ExtResource("3_fu5tj")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="Resource" id="Resource_dnyer"]
+script = ExtResource("4_kvcqp")
+closed_pose = ExtResource("6_hvkaa")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[node name="Zippo" type="RigidBody3D" unique_id=1897529184]
+collision_layer = 4
+script = ExtResource("1_fu5tj")
+picked_up_layer = 65540
+ranged_grab_method = 0
+second_hand_grab = 2
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=2012323257]
+shape = SubResource("ConvexPolygonShape3D_yy303")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=193028164]
+mesh = SubResource("BoxMesh_ec2tb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1592017033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.041856453, 0)
+mesh = SubResource("BoxMesh_swihr")
+
+[node name="GrabPointHandLeft" parent="." unique_id=325195282 instance=ExtResource("2_hvkaa")]
+transform = Transform3D(0.9419403, 0, -0.33578038, 0, 1, 0, 0.33578038, 0, 0.9419403, -0.018000197, 0.029339291, -0.06151889)
+hand_pose = SubResource("Resource_6tgd5")
+
+[node name="GrabPointHandRight" parent="." unique_id=1951478860 instance=ExtResource("5_ipbpn")]
+transform = Transform3D(0.8579215, 0, 0.5137809, 0, 1, 0, -0.5137809, 0, 0.8579215, 0.005299531, 0.028782442, -0.06544578)
+hand_pose = SubResource("Resource_dnyer")
