@@ -121,7 +121,7 @@ tracks/0/path = NodePath("gun:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2),
+"handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0, -0.016834488, 0, 0.033165514, 0, 0, -0.050000004, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.101006925, 0.3)
 }
@@ -132,7 +132,7 @@ tracks/1/path = NodePath("gun:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2),
+"handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(0.03432199, -0.15, 0, 0.15, 0, 0.060222384, -0.016834488, 0, 0.033165514, 0, 0.03432199, -0.050000004, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.101006925, 0.3)
 }
@@ -143,7 +143,7 @@ tracks/2/path = NodePath("gun:position:z")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2),
+"handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(0.041403975, -0.15, 0, 0.15, 0, 0.07961806, -0.016834488, 0, 0.033165514, 0, 0.041403975, -0.050000004, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.101006925, 0.3)
 }
@@ -183,32 +183,38 @@ _data = {
 &"Spin": SubResource("Animation_msojd")
 }
 
-[node name="Gun_Controller" type="Node3D" unique_id=2019380971]
+[node name="gun" type="RigidBody3D" unique_id=495250676]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, 0.03432199, 0.041403975)
+collision_layer = 4
+script = ExtResource("1_1ymjy")
+picked_up_layer = 65540
+
+[node name="Gun_Controller" type="Node3D" parent="." unique_id=2019380971]
 script = ExtResource("1_6dbqf")
 
-[node name="gun" type="RigidBody3D" parent="." unique_id=495250676]
-transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, 0.03432199, 0.041403975)
-script = ExtResource("1_1ymjy")
-
-[node name="GrabPointHandLeft" parent="gun" unique_id=325195282 instance=ExtResource("2_6dbqf")]
+[node name="GrabPointHandLeft" parent="." unique_id=325195282 instance=ExtResource("2_6dbqf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.012703669, 0.02287414, 0.034639556)
 hand_pose = SubResource("Resource_6tgd5")
 
-[node name="GrabPointHandRight" parent="gun" unique_id=1951478860 instance=ExtResource("5_r3uyx")]
+[node name="GrabPointHandRight" parent="." unique_id=1951478860 instance=ExtResource("5_r3uyx")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.0017200292, 0.022243455, 0.03524668)
 hand_pose = SubResource("Resource_dnyer")
 
-[node name="gun_001" type="MeshInstance3D" parent="gun" unique_id=1775753007]
+[node name="Mesh_Gun" type="MeshInstance3D" parent="." unique_id=1775753007]
 mesh = SubResource("ArrayMesh_7a5rn")
 surface_material_override/0 = SubResource("StandardMaterial3D_voqkj")
 
-[node name="Col_Barrel" type="CollisionShape3D" parent="gun" unique_id=107137558]
+[node name="Col_Barrel" type="CollisionShape3D" parent="." unique_id=107137558]
 transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 0.01768823, 0.029639006)
 shape = SubResource("CylinderShape3D_msojd")
 
-[node name="Col_Grip" type="CollisionShape3D" parent="gun" unique_id=1207305501]
+[node name="Col_Grip" type="CollisionShape3D" parent="." unique_id=1207305501]
 transform = Transform3D(1, 0, 0, 0, 0.95079184, -0.30983022, 0, 0.30983022, 0.95079184, 0, -0.027946508, -0.04373501)
 shape = SubResource("BoxShape3D_r3uyx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=991745946]
+root_node = NodePath("../Gun_Controller")
 libraries/ = SubResource("AnimationLibrary_msojd")
+
+[node name="Bullet_Origin" type="Marker3D" parent="." unique_id=475526935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.881784e-16, 0.052011732, -0.087978646)

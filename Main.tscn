@@ -69,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0373676, -0.5688098, -6.64
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4355426, 0.42523718, 0.027312994)
 
 [node name="Bernie" parent="." unique_id=1840782099 instance=ExtResource("7_trn2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24629277, 1.0199999, -0.030947924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19098917, 1.0199999, -0.09468177)
 
 [node name="Bong" parent="." unique_id=535430157 instance=ExtResource("8_trn2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26856995, 1.0130341, 0.03691995)
@@ -78,4 +78,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26856995, 1.0130341, 0.0369
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0018471479, 1.0325, 0.122924626)
 
 [node name="Gun_Controller" parent="." unique_id=2019380971 instance=ExtResource("11_20pc6")]
-transform = Transform3D(0.5017976, 0.86498505, 0, -0.86498505, 0.5017976, 0, 0, 0, 1, -0.38686803, 1.0351794, 0.007113695)
+transform = Transform3D(0.90066034, 0.43452388, 0, -0.43452388, 0.90066034, 0, 0, 0, 1, -0.3308281, 1.0949843, 0.058157027)
