@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://un5f2rbg8df4" path="res://Objects/Bernie.tscn" id="7_trn2v"]
 [ext_resource type="PackedScene" uid="uid://c4qhwniu1cdlo" path="res://Objects/Bong.tscn" id="8_trn2v"]
 [ext_resource type="PackedScene" uid="uid://dye3al27lo6pr" path="res://Objects/Zippo.tscn" id="9_03owx"]
+[ext_resource type="PackedScene" uid="uid://bw8q6kdt5r6pn" path="res://Objects/Gun.tscn" id="11_20pc6"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_20pc6"]
 panorama = ExtResource("2_wkp8b")
@@ -68,10 +69,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0373676, -0.5688098, -6.64
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4355426, 0.42523718, 0.027312994)
 
 [node name="Bernie" parent="." unique_id=1840782099 instance=ExtResource("7_trn2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24629277, 1.0199999, -0.030947924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19098917, 1.0199999, -0.09468177)
 
 [node name="Bong" parent="." unique_id=535430157 instance=ExtResource("8_trn2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26856995, 1.0130341, 0.03691995)
 
 [node name="Zippo" parent="." unique_id=1442560392 instance=ExtResource("9_03owx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0018471479, 1.0325, 0.122924626)
+
+[node name="Gun_Controller" parent="." unique_id=2019380971 instance=ExtResource("11_20pc6")]
+transform = Transform3D(0.90066034, 0.43452388, 0, -0.43452388, 0.90066034, 0, 0, 0, 1, -0.3308281, 1.0949843, 0.058157027)

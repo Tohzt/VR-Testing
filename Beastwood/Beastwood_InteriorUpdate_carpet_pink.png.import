@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://24bx8rxi32pi"
-path.s3tc="res://.godot/imported/Beastwood_InteriorUpdate_carpet_pink.png-b87899d7485588f6ffc243091561a510.s3tc.ctex"
 path.etc2="res://.godot/imported/Beastwood_InteriorUpdate_carpet_pink.png-b87899d7485588f6ffc243091561a510.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -16,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Beastwood/Beastwood_InteriorUpdate_carpet_pink.png"
-dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_carpet_pink.png-b87899d7485588f6ffc243091561a510.s3tc.ctex", "res://.godot/imported/Beastwood_InteriorUpdate_carpet_pink.png-b87899d7485588f6ffc243091561a510.etc2.ctex"]
+dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_carpet_pink.png-b87899d7485588f6ffc243091561a510.etc2.ctex"]
 
 [params]
 
