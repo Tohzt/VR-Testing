@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="testing vr"
-run/main_scene="res://Main.tscn"
+run/main_scene="uid://b0mpin8ydumh6"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 XRToolsUserSettings="*uid://bqgb8i74tm0t"
 XRToolsRumbleManager="*uid://by853dk86g1qw"
+Global="*uid://bajc20xesml4m"
 
 [editor_plugins]
 

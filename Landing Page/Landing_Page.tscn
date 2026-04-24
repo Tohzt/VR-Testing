@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b0mpin8ydumh6"]
+
+[ext_resource type="Script" uid="uid://4vjkfd4vgq5s" path="res://Landing Page/landing_page.gd" id="1_urod8"]
+
+[node name="LandingPage" type="CanvasLayer" unique_id=530433498]
+script = ExtResource("1_urod8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=648572191]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0.30498528, 0.30498528, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1692830001]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=1553440523]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer" unique_id=993317869]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=746696103]
+layout_mode = 2
+text = "LandingPage"
+
+[node name="Btn_Solo" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1799604036]
+layout_mode = 2
+text = "Solo"
+
+[node name="Btn_Join" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1860429799]
+layout_mode = 2
+text = "Join"
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Btn_Solo" to="." method="_on_btn_solo_pressed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Btn_Join" to="." method="_on_btn_join_pressed"]

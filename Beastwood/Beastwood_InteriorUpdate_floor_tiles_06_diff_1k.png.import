@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n8nw461fttqi"
+path.s3tc="res://.godot/imported/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png-b76f089533c4b85d32e9c2533eee1cdb.s3tc.ctex"
 path.etc2="res://.godot/imported/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png-b76f089533c4b85d32e9c2533eee1cdb.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Beastwood/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png"
-dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png-b76f089533c4b85d32e9c2533eee1cdb.etc2.ctex"]
+dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png-b76f089533c4b85d32e9c2533eee1cdb.s3tc.ctex", "res://.godot/imported/Beastwood_InteriorUpdate_floor_tiles_06_diff_1k.png-b76f089533c4b85d32e9c2533eee1cdb.etc2.ctex"]
 
 [params]
 

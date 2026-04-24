@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5su374jsf0dn"
+path.s3tc="res://.godot/imported/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png-fa7f67a1215c155a2c15c70494e21866.s3tc.ctex"
 path.etc2="res://.godot/imported/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png-fa7f67a1215c155a2c15c70494e21866.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Beastwood/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png"
-dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png-fa7f67a1215c155a2c15c70494e21866.etc2.ctex"]
+dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png-fa7f67a1215c155a2c15c70494e21866.s3tc.ctex", "res://.godot/imported/Beastwood_InteriorUpdate_blue_painted_planks_diff_1k.png-fa7f67a1215c155a2c15c70494e21866.etc2.ctex"]
 
 [params]
 
