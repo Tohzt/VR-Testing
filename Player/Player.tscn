@@ -14,9 +14,10 @@
 [node name="Player" type="Node3D" unique_id=1487023001]
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1320749375]
-world_scale = 1.0
 
 [node name="PlayerBody" parent="XROrigin3D" unique_id=111404520 instance=ExtResource("1_6ysni")]
+collision_layer = 524290
+collision_mask = 1017
 player_height_max = 2.0
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1654719701]

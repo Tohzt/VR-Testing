@@ -68,7 +68,7 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("gun:position:x")
+tracks/0/path = NodePath("..:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -79,7 +79,7 @@ tracks/0/keys = {
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("gun:position:y")
+tracks/1/path = NodePath("..:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -90,7 +90,7 @@ tracks/1/keys = {
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("gun:position:z")
+tracks/2/path = NodePath("..:position:z")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -98,17 +98,38 @@ tracks/2/keys = {
 "points": PackedFloat32Array(0.041403975, -0.15, 0, 0.15, 0),
 "times": PackedFloat32Array(0)
 }
-tracks/3/type = "value"
+tracks/3/type = "bezier"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("gun:rotation")
+tracks/3/path = NodePath("..:rotation:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 3.1415925, 0)]
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("..:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(3.1415925, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("..:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="Animation" id="Animation_voqkj"]
@@ -117,63 +138,105 @@ length = 0.3
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("gun:position:x")
+tracks/0/path = NodePath("..:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0, -0.016834488, 0, 0.033165514, 0, 0, -0.050000004, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.101006925, 0.3)
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 0, -0.016797436, 0, 0.033202566, 0, 0, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.100784615, 0.3)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("gun:position:y")
+tracks/1/path = NodePath("..:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.03432199, -0.15, 0, 0.15, 0, 0.060222384, -0.016834488, 0, 0.033165514, 0, 0.03432199, -0.050000004, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.101006925, 0.3)
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.03432199, -0.15, 0, 0.15, 0, 0.0942792, -0.016797436, 0, 0.033202566, 0, 0.03432199, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.100784615, 0.3)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("gun:position:z")
+tracks/2/path = NodePath("..:position:z")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.041403975, -0.15, 0, 0.15, 0, 0.07961806, -0.016834488, 0, 0.033165514, 0, 0.041403975, -0.050000004, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.101006925, 0.3)
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.041403975, -0.15, 0, 0.15, 0, 0.1205679, -0.016797436, 0, 0.033202566, 0, 0.041403975, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.100784615, 0.3)
 }
-tracks/3/type = "value"
+tracks/3/type = "bezier"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("gun:rotation")
+tracks/3/path = NodePath("..:rotation:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.101006925, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 3.1415925, 0), Vector3(-0.2805617, 3.1415925, 4.3511335e-08), Vector3(0, 3.1415925, 0)]
+"handle_modes": PackedInt32Array(2, 2, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.016797436, -0.111427635, -0.6685658, 0, 0, 0.033202566, 0.111427635, 0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.100784615, 0.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("..:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(2, 2, 0),
+"points": PackedFloat32Array(3.1415925, 0, 0, 0.016797436, 0, 3.1415925, 0, 0, 0.033202566, 0, 3.1415925, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.100784615, 0.3)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("..:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(2, 2, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.016797436, 1.987916e-08, 1.1927496e-07, 0, 0, 0.033202566, -1.987916e-08, 0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0, 0.100784615, 0.3)
 }
 
 [sub_resource type="Animation" id="Animation_msojd"]
 resource_name = "Spin"
-length = 0.5
-tracks/0/type = "value"
+length = 0.3
+tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("gun:rotation")
+tracks/0/path = NodePath("..:rotation:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 3.1415925, 0), Vector3(-6.2831855, 3.1415927, 0)]
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -6.2831855, -0.016666668, 1.0435432, 5.8365367e-05, -0.0036544069, -6.2831855, -0.016725034, 1.0471977, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.30035022)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(3.1415925, -0.25, 0, 0.25, 0, 3.1415927, -0.016666668, -3.9597765e-08, 5.8365367e-05, 1.3866827e-10, 3.1415927, -0.016725034, -3.9736435e-08, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.30035022)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.016666668, 0, 5.8365367e-05, 0, 0, -0.016725034, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.30035022)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_msojd"]
@@ -186,6 +249,7 @@ _data = {
 [node name="gun" type="RigidBody3D" unique_id=495250676]
 transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, 0.03432199, 0.041403975)
 collision_layer = 4
+collision_mask = 7
 script = ExtResource("1_1ymjy")
 picked_up_layer = 65540
 
@@ -217,4 +281,4 @@ root_node = NodePath("../Gun_Controller")
 libraries/ = SubResource("AnimationLibrary_msojd")
 
 [node name="Bullet_Origin" type="Marker3D" parent="." unique_id=475526935]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.881784e-16, 0.052011732, -0.087978646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2965303e-08, 0.017342437, 0.13034071)

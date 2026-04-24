@@ -30,6 +30,7 @@ metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
 [node name="Bernie" type="RigidBody3D" unique_id=1897529184]
 collision_layer = 4
+collision_mask = 7
 mass = 0.26
 physics_material_override = SubResource("PhysicsMaterial_fim61")
 script = ExtResource("1_jltl0")

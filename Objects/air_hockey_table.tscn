@@ -134,7 +134,7 @@ height = 0.025
 [node name="Air Hockey" type="Node3D" unique_id=485288983]
 
 [node name="Table" type="StaticBody3D" parent="." unique_id=243692225]
-collision_layer = 5
+collision_mask = 5
 
 [node name="Table Base" type="CollisionShape3D" parent="Table" unique_id=1478853415]
 shape = SubResource("ConvexPolygonShape3D_l5yow")
@@ -173,7 +173,8 @@ mesh = SubResource("BoxMesh_2ckfp")
 
 [node name="Paddle Red" type="RigidBody3D" parent="." unique_id=1897529184]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7161399, -0.77742696)
-collision_layer = 5
+collision_layer = 4
+collision_mask = 7
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 freeze_mode = 1
@@ -197,7 +198,8 @@ mesh = SubResource("TorusMesh_egv43")
 
 [node name="Paddle Blue" type="RigidBody3D" parent="." unique_id=729027493]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7161399, 0.76967454)
-collision_layer = 5
+collision_layer = 4
+collision_mask = 7
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 freeze_mode = 1
@@ -229,7 +231,8 @@ hand_pose = SubResource("Resource_p67t8")
 
 [node name="Puck" type="RigidBody3D" parent="." unique_id=1800290140]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5125, 0.3559086)
-collision_mask = 3
+collision_layer = 4
+collision_mask = 7
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 mass = 0.05

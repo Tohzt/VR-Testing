@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn3166wlj4qk0"
-path.s3tc="res://.godot/imported/Beastwood_InteriorUpdate_painted_concrete_diff_1k.png-bd901c9081e2873000ddc96f47cafe95.s3tc.ctex"
 path.etc2="res://.godot/imported/Beastwood_InteriorUpdate_painted_concrete_diff_1k.png-bd901c9081e2873000ddc96f47cafe95.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -16,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Beastwood/Beastwood_InteriorUpdate_painted_concrete_diff_1k.png"
-dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_painted_concrete_diff_1k.png-bd901c9081e2873000ddc96f47cafe95.s3tc.ctex", "res://.godot/imported/Beastwood_InteriorUpdate_painted_concrete_diff_1k.png-bd901c9081e2873000ddc96f47cafe95.etc2.ctex"]
+dest_files=["res://.godot/imported/Beastwood_InteriorUpdate_painted_concrete_diff_1k.png-bd901c9081e2873000ddc96f47cafe95.etc2.ctex"]
 
 [params]
 
